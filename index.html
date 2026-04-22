@@ -5,39 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <title>Instagram Feed</title>
 </head>
 
 <body class="bg-light">
-  
 
-<nav class="navbar navbar-light bg-white">
-  <div class="container">
-    <span class="navbar-brand">Instagram</span>
+<nav class="navbar navbar-light bg-white px-3">
+  <span class="navbar-brand mb-0">Instagram</span>
 
-    <div class="d-flex">
-      <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#newPostModal">
-        Create a new post
+  <div class="d-flex gap-2">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPostModal">
+      Create a new post
+    </button>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+        <i class="fas fa-cog"></i>
       </button>
-
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
-          <i class="fas fa-cog"></i>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Accessibility</a></li>
-          <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
-        </ul>
-      </div>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Accessibility</a></li>
+        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<div class="container text-center mt-3">
+<div class="text-center mt-3">
   <ul class="nav nav-tabs justify-content-center">
     <li class="nav-item">
       <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#grid">
@@ -66,25 +62,27 @@
   </div>
 
   <div class="tab-pane fade" id="list">
-    <div class="card mb-3">
+
+    <div class="card mb-3 mx-auto" style="max-width: 500px;">
       <div class="card-header d-flex justify-content-between">
         <strong>My first photo</strong><span>12/14</span>
       </div>
       <img src="https://picsum.photos/600/400?7" class="card-img-top">
       <div class="card-body">
-        <p>Beautiful view!</p>
+        <p class="mb-0">Beautiful view!</p>
       </div>
     </div>
 
-    <div class="card mb-3">
+    <div class="card mb-3 mx-auto" style="max-width: 500px;">
       <div class="card-header d-flex justify-content-between">
         <strong>Another photo</strong><span>12/15</span>
       </div>
       <img src="https://picsum.photos/600/400?8" class="card-img-top">
       <div class="card-body">
-        <p>Another awesome moment.</p>
+        <p class="mb-0">Another awesome moment.</p>
       </div>
     </div>
+
   </div>
 
 </div>
@@ -94,14 +92,17 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5>Create a new post</h5>
+        <h5 class="mb-0">Create a new post</h5>
         <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <div class="modal-body">
         <textarea class="form-control mb-2" placeholder="Add caption..."></textarea>
-        <button class="btn btn-light"><i class="fas fa-camera"></i></button>
-        <button class="btn btn-light"><i class="fas fa-map-marker-alt"></i></button>
+
+        <div class="d-flex gap-2">
+          <button class="btn btn-light"><i class="fas fa-camera"></i></button>
+          <button class="btn btn-light"><i class="fas fa-map-marker-alt"></i></button>
+        </div>
       </div>
 
       <div class="modal-footer">
